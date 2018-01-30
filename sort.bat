@@ -9,3 +9,6 @@ exiftool.exe -ext MTS -r "-FileName<DateTimeOriginal" -d "Videos/%%Y/%%Y.%%m.%%d
 
 :: Crappy MPG
 exiftool.exe -ext MPG -r "-FileName<FileModifyDate" -d "Videos/%%Y/%%Y.%%m.%%d - %%H.%%M.%%S%%%%-c.%%%%e" Sort
+
+:: Crappy DNG
+exiftool.exe -ext DNG -r "-FileName<DateTimeOriginal" -d "Photos/%%Y/%%m/%%Y.%%m.%%d_%%H.%%M.%%S%%%%-c.%%%%e" -fileorder filename Sort
